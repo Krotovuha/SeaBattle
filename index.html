@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<style type="text/css">
+
+		.defeat{
+			position: absolute;
+			top: 105px;
+			left: 310px;
+			display: none;
+			background: url(defeat.jpg);
+			background-size:100% 100% ;
+			height: 700px;
+			width: 850px;
+			
+		}
+		.win{
+			position: absolute;
+			top: 105px;
+			left: 310px;
+			display: none;
+			background: url(win.png);
+			background-size:100% 100% ;
+			height: 700px;
+			width: 850px;
+		}
+	</style>
+</head>
+<body style="background-image: url(fon.jpg);background-size: 100% 100%;">
+	
+	<h1 class="text-center">Морской Бой</h1>
+	<h3 class="text-center">Ты должен потопить все корабли противника</h3>
+	<h3 class="text-center">Фиолетовый - 4 клетки</h3>
+	<h3 class="text-center">Жёлтый - 3 клетки (2 штуки)</h3>
+	<h3 class="text-center">Зелёный - 2 клетки (3 штуки)</h3>
+	<h3 class="text-center">Синий - 1 клетка (4 штуки)</h3>
+	<h1 class="text">Кол-во выстрелов: <span class="emountshoot text">20</span></h1>
+	<div class="col-7 mx-auto mt-5">
+		<div class="row">
+			<div class="col border border-primary " style="height: 80px;"></div>
+			<div class="col border border-primary " style="height: 80px;">1</div>
+			<div class="col border border-primary " style="height: 80px;">2</div>
+			<div class="col border border-primary " style="height: 80px;">3</div>
+			<div class="col border border-primary " style="height: 80px;">4</div>
+			<div class="col border border-primary " style="height: 80px;">5</div>
+			<div class="col border border-primary " style="height: 80px;">6</div>
+			<div class="col border border-primary " style="height: 80px;">7</div>
+			<div class="col border border-primary " style="height: 80px;">8</div>
+			<div class="col border border-primary " style="height: 80px;">9</div>
+			<div class="col border border-primary " style="height: 80px;">10</div>	
+		</div>
+
+		<div class="row">
+			<div class="col border border-primary " style="height: 80px;">A</div>
+			<div class="col border border-primary miss" style="height: 80px;"></div>
+			<div class="col border border-primary ship4" style="height: 80px;"></div>
+			<div class="col border border-primary miss" style="height: 80px;"></div>
+			<div class="col border border-primary miss" style="height: 80px;"></div>
+			<div class="col border border-primary miss" style="height: 80px;"></div>
+			<div class="col border border-primary miss" style="height: 80px;"></div>
+			<div class="col border border-primary miss" style="height: 80px;"></div>
+			<div class="col border border-primary miss" style="height: 80px;"></div>
+			<div class="col border border-primary miss" style="height: 80px;"></div>
+			<div class="col border border-primary miss" style="height: 80px;"></div>	
+		</div>
+		<div class="row">
+			<div class="col border border-primary " style="height: 80px;">B</div>
+			<div class="col border border-primary miss" style="height: 80px;"></div>
+			<div class="col border border-primary ship4" style="height: 80px;"></div>
+			<div class="col border border-primary miss" style="height: 80px;"></div>
+			<div class="col border border-primary miss" style="height: 80px;"></div>
+			<div class="col border border-primary miss" style="height: 80px;"></div>
+			<div class="col border border-primary miss" style="height: 80px;"></div>
+			<div class="col border border-primary miss" style="height: 80px;"></div>
+			<div class="col border border-primary miss" style="height: 80px;"></div>
+			<div class="col border border-primary ship1" style="height: 80px;"></div>
+			<div class="col border border-primary miss" style="height: 80px;"></div>	
+		</div>
+		<div class="row">
+			<div class="col border border-primary " style="height: 80px;">C</div>
+			<div class="col border border-primary miss" style="height: 80px;"></div>
+			<div class="col border border-primary ship4" style="height: 80px;"></div>
+			<div class="col border border-primary miss" style="height: 80px;"></div>
+			<div class="col border border-primary miss" style="height: 80px;"></div>
+			<div class="col border border-primary miss" style="height: 80px;"></div>
+			<div class="col border border-primary ship1" style="height: 80px;"></div>
+			<div class="col border border-primary miss" style="height: 80px;"></div>
+			<div class="col border border-primary miss" style="height: 80px;"></div>
+			<div class="col border border-primary miss" style="height: 80px;"></div>
+			<div class="col border border-primary miss" style="height: 80px;"></div>	
+		</div>
+		<div class="row">
+			<div class="col border border-primary " style="height: 80px;">D</div>
+			<div class="col border border-primary miss" style="height: 80px;"></div>
+			<div class="col border border-primary ship4" style="height: 80px;"></div>
+			<div class="col border border-primary miss" style="height: 80px;"></div>
+			<div class="col border border-primary miss" style="height: 80px;"></div>
+			<div class="col border border-primary miss" style="height: 80px;"></div>
+			<div class="col border border-primary miss" style="height: 80px;"></div>
+			<div class="col border border-primary miss" style="height: 80px;"></div>
+			<div class="col border border-primary miss" style="height: 80px;"></div>
+			<div class="col border border-primary miss" style="height: 80px;"></div>
+			<div class="col border border-primary miss" style="height: 80px;"></div>	
+		</div>
+		<div class="row">
+			<div class="col border border-primary " style="height: 80px;">E</div>
+			<div class="col border border-primary miss" style="height: 80px;"></div>
+			<div class="col border border-primary miss" style="height: 80px;"></div>
+			<div class="col border border-primary miss" style="height: 80px;"></div>
+			<div class="col border border-primary ship3" style="height: 80px;"></div>
+			<div class="col border border-primary miss" style="height: 80px;"></div>
+			<div class="col border border-primary miss" style="height: 80px;"></div>
+			<div class="col border border-primary miss" style="height: 80px;"></div>
+			<div class="col border border-primary miss" style="height: 80px;"></div>
+			<div class="col border border-primary miss" style="height: 80px;"></div>
+			<div class="col border border-primary ship1" style="height: 80px;"></div>	
+		</div>
+		<div class="row">
+			<div class="col border border-primary " style="height: 80px;">F</div>
+			<div class="col border border-primary miss" style="height: 80px;"></div>
+			<div class="col border border-primary miss" style="height: 80px;"></div>
+			<div class="col border border-primary miss" style="height: 80px;"></div>
+			<div class="col border border-primary ship3" style="height: 80px;"></div>
+			<div class="col border border-primary miss" style="height: 80px;"></div>
+			<div class="col border border-primary miss" style="height: 80px;"></div>
+			<div class="col border border-primary miss" style="height: 80px;"></div>
+			<div class="col border border-primary miss" style="height: 80px;"></div>
+			<div class="col border border-primary miss" style="height: 80px;"></div>
+			<div class="col border border-primary miss" style="height: 80px;"></div>	
+		</div>
+		<div class="row">
+			<div class="col border border-primary " style="height: 80px;">G</div>
+			<div class="col border border-primary miss" style="height: 80px;"></div>
+			<div class="col border border-primary ship1" style="height: 80px;"></div>
+			<div class="col border border-primary miss" style="height: 80px;"></div>
+			<div class="col border border-primary ship3" style="height: 80px;"></div>
+			<div class="col border border-primary miss" style="height: 80px;"></div>
+			<div class="col border border-primary miss" style="height: 80px;"></div>
+			<div class="col border border-primary miss" style="height: 80px;"></div>
+			<div class="col border border-primary ship2" style="height: 80px;"></div>
+			<div class="col border border-primary miss" style="height: 80px;"></div>
+			<div class="col border border-primary miss" style="height: 80px;"></div>	
+		</div>
+		<div class="row">
+			<div class="col border border-primary " style="height: 80px;">H</div>
+			<div class="col border border-primary miss" style="height: 80px;"></div>
+			<div class="col border border-primary miss" style="height: 80px;"></div>
+			<div class="col border border-primary miss" style="height: 80px;"></div>
+			<div class="col border border-primary miss" style="height: 80px;"></div>
+			<div class="col border border-primary miss" style="height: 80px;"></div>
+			<div class="col border border-primary miss" style="height: 80px;"></div>
+			<div class="col border border-primary miss" style="height: 80px;"></div>
+			<div class="col border border-primary ship2" style="height: 80px;"></div>
+			<div class="col border border-primary miss" style="height: 80px;"></div>
+			<div class="col border border-primary miss" style="height: 80px;"></div>	
+		</div>
+		<div class="row">
+			<div class="col border border-primary " style="height: 80px;">I</div>
+			<div class="col border border-primary miss" style="height: 80px;"></div>
+			<div class="col border border-primary ship3" style="height: 80px;"></div>
+			<div class="col border border-primary ship3" style="height: 80px;"></div>
+			<div class="col border border-primary ship3" style="height: 80px;"></div>
+			<div class="col border border-primary miss" style="height: 80px;"></div>
+			<div class="col border border-primary ship2" style="height: 80px;"></div>
+			<div class="col border border-primary miss" style="height: 80px;"></div>
+			<div class="col border border-primary miss" style="height: 80px;"></div>
+			<div class="col border border-primary ship2" style="height: 80px;"></div>
+			<div class="col border border-primary miss" style="height: 80px;"></div>	
+		</div>
+		<div class="row">
+			<div class="col border border-primary " style="height: 80px;">J</div>
+			<div class="col border border-primary miss" style="height: 80px;"></div>
+			<div class="col border border-primary miss" style="height: 80px;"></div>
+			<div class="col border border-primary miss" style="height: 80px;"></div>
+			<div class="col border border-primary miss" style="height: 80px;"></div>
+			<div class="col border border-primary miss" style="height: 80px;"></div>
+			<div class="col border border-primary ship2" style="height: 80px;"></div>
+			<div class="col border border-primary miss" style="height: 80px;"></div>
+			<div class="col border border-primary miss" style="height: 80px;"></div>
+			<div class="col border border-primary ship2" style="height: 80px;"></div>
+			<div class="col border border-primary miss" style="height: 80px;"></div>	
+		</div>
+	</div>
+	<div class="defeat"></div>
+	<div class="win"></div>
+<script type="text/javascript">
+	let emountshoot = document.querySelector(".emountshoot")
+	let es = 20
+	let ship1 = document.querySelectorAll(".ship1")
+	let ship2 = document.querySelectorAll(".ship2")
+	let ship3 = document.querySelectorAll(".ship3")
+	let ship4 = document.querySelectorAll(".ship4")
+	let miss = document.querySelectorAll(".miss")
+	let win = document.querySelector(".win")
+	let score = 0
+
+	let m = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,]
+	for(let i = 0; i < ship1.length; i++){
+			ship1[i].onclick = function(){
+				
+				ship1[i].style.background = "blue"
+				score = score + 1
+				if (score == 20 ){
+					win.style.display = "block"
+				}
+			}
+		}
+	for(let i = 0; i < ship2.length; i++){
+			ship2[i].onclick = function(){
+				ship2[i].style.background = "green"
+				score = score + 1
+				if (score == 20 ){
+					win.style.display = "block"
+				}
+			}
+		}
+	for(let i = 0; i < ship3.length; i++){
+			ship3[i].onclick = function(){
+				ship3[i].style.background = "yellow"
+				score = score + 1
+				if (score == 20 ){
+					win.style.display = "block"
+				}
+			}
+		}
+	for(let i = 0; i < ship4.length; i++){
+			ship4[i].onclick = function(){
+				ship4[i].style.background = "purple"
+				score = score + 1
+				if (score == 20 ){
+					win.style.display = "block"
+				}
+			}
+		}
+	for(let i = 0; i < miss.length; i++){
+			miss[i].onclick = function(){
+				if (m[i]==0) {
+					miss[i].style.background = "grey"
+					es=es - 1
+					emountshoot.innerHTML = es
+					if (es==0) {
+						document.querySelector(".defeat").style.display = "block"
+					}
+					m[i]=1
+				}
+				
+			}
+		}
+</script>
+</body>
+</html>
